@@ -31,8 +31,8 @@ public class BookController {
         bookService.update(bookDTO);
     }
     @PostMapping("/{isbn}")
-    public void findByIsbn(@PathVariable Long isbn){
-        bookService.findByIsbn(isbn);
+    public BookDTO findByIsbn(@PathVariable Long isbn){
+       return bookService.findByIsbn(isbn);
     }
 
 }
